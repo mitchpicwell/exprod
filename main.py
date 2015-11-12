@@ -13,6 +13,7 @@ if __name__ == "__main__":
     sc = SparkContext(appName="PythonWordCount")
     lines = sc.textFile(sys.argv[1], 1)
     print (lines.filter(lambda line: "Spark" in line))
+    print ("!!!! Spark Count !!!!")
     counts = lines.flatMap(lambda x: x.split(' ')) \
                   .map(lambda x: (x, 1)) \
                   .reduceByKey(add)
