@@ -12,7 +12,9 @@ def word_count(file,word):
     sc = SparkContext(appName="PythonWordCount")
     lines = sc.textFile(file)
     return lines.filter(lambda line: word in line).count()
+    sc.stop()
   except Exception as e:
+    sc.stop()
     print (e)
     exit(1)
 if __name__ == "__main__":
