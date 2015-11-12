@@ -1,3 +1,2 @@
 # exprod
-# This is a test commit
-# By: Mitchell Fiorentini
+To run the project simply have ansible installed on your local machine. Then Vagrant up!
